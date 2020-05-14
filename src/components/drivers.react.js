@@ -45,8 +45,8 @@ export default connect(mapStateToProps)(Drivers)
             //     </div>
             //     <div className="mt-4 md:mt-0 md:ml-6">
             //         <div className="uppercase tracking-wide text-sm text-indigo-600 font-bold">Ibring Drivers</div>
-            //         <a href="#" className="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline">{driver.fname}</a>
+            //         <a href="/" className="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline">{driver.fname}</a>
             //         <p className="mt-2 text-gray-600">{driver.mode}.</p>
-            //         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Button</button>
+            //         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Button</button>
             //     </div>
             // </div>

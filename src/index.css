@@ -16,3 +16,60 @@ break{
   flex-basis: 100%;
   height: 0px;
 }
+
+.h-95M {
+height: 95vh;
+}
+
+.h-90M {
+  height: 90vh;
+  }
+
+.h-5M {
+  height: 5vh;
+  }
+
+.h-50M {
+  height: 50vh;
+}
+
+.h-31M {
+  height: 31vh;
+}
+
+.h-63M {
+  height: 63vh;
+}
+
+.w-10M{
+  width: 20%;
+}
+
+.w-90M{
+  width: 90%;
+}
+/* @media screen and (max-width:1024px)
+{
+  .w-10M{
+    width: 10%;
+  }
+}
+
+@media screen and (max-width:768px)
+{
+  .w-10M{
+    width: 10%;
+  }
+} */
+
+
+.sidebar-align{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80vh;
+}
+
+
+
+
