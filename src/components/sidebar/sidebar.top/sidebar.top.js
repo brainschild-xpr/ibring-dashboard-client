@@ -9,7 +9,7 @@ import { EarningSideBarButton } from './earnings/earning.button';
 export class SideBarTop extends Component {
     render() {
         return (
-            <div className='bg-gray-400 rounded-lg'>
+            <div className='rounded-lg relative'>
                 <DashboardSideBarButton />
                 <RidersSideBarButton/>
                 <OrderSideBarButton/>

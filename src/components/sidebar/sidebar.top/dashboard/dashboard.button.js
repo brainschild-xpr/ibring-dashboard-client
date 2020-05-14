@@ -17,7 +17,7 @@ export class DashboardSideBarButton extends Component {
                 hover:bg-teal-700
                 hover:border-teal-300
                 rounded-lg 
-                border-b-2 border-r-2 border-gray-800">
+                border-l-0 border-r-0 border-gray-800">
 
                         <i className="fas fa-tachometer-alt md:pr-3 text-black-500"></i>
 

@@ -17,7 +17,7 @@ export class LogOutSideBarButton extends Component {
                 hover:bg-teal-700
                 hover:border-teal-300
                 rounded-lg 
-                border-b-2 border-r-2 border-gray-800">
+                border-l-0 border-r-0 border-gray-800">
                     <div className='flex flex-row justify-between'>
                       <div>
                         <i className="fas fa-sign-out-alt md:pr-3"></i>

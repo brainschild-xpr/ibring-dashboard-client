@@ -9,20 +9,20 @@ export class MDBanner extends Component {
   render() {
     return (
 
-      <div className='hidden md:flex md:flex-row md:mt-0'>
-        <div className=" w-1/4 md:mr-1 bg-teal-400 h-31M shadow-2xl rounded-lg border-2 border-teal-500">
+      <div className='flex flex-row'>
+        <div className="w-1/4 mx-16 bg-teal-400 shadow-2xl rounded-lg border-2 border-teal-500">
           <DriverBanner />
         </div>
 
-        <div className=" w-1/4 sm:ml-1 md:mr-1 md:ml-1 bg-orange-500 h-31M shadow-2xl rounded-lg border-2 border-orange-500">
+        <div className="w-1/4 mr-8 bg-orange-500 shadow-2xl rounded-lg border-2 border-orange-500">
           <OrderBanner />
         </div>
 
-        <div className=" w-1/4 md:ml-1 md:mr-1 lg:mr-1 bg-blue-500 h-31M shadow-2xl rounded-lg border-2 border-blue-500">
+        <div className="w-1/4 ml-8 bg-blue-500 shadow-2xl rounded-lg border-2 border-blue-500">
           <DeliveryBanner />
         </div>
 
-        <div className=" w-1/4 md:ml-1 md:mr-0 lg:mr- lg:ml-1 bg-red-500 h-31M shadow-2xl rounded-lg border-2 border-red-500">
+        <div className="w-1/4 mx-16 bg-red-500 shadow-2xl rounded-lg border-2 border-red-500">
           <EarningBanner />
         </div>
       </div >

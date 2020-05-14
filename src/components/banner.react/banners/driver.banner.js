@@ -9,7 +9,7 @@ export class DriverBanner extends Component {
                     <div className='flex flex-row'>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-user stroke-current text-teal-400 w-16 m-2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                         <div className='p-6'>
-                            <h1 className='text-lg text-teal-400 font-bold'>Drivers</h1>
+                            <h1 className='text-lg text-teal-400 font-bold'>Riders</h1>
                         </div>
                     </div>
                 </div>
