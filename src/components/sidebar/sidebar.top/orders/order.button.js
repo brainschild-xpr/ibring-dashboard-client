@@ -22,9 +22,9 @@ export class OrderSideBarButton extends Component {
         const OpenedDropDownState = () => {
             return (
                 <div className='rounded-lg py-1 ml-6 mb-1 mt-2'>
-                    <a className='block px-2 py-1 text-gray-900 rounded-lg hover:bg-orange-500 hover:text-orange-300' href="/riders/manage">All</a>
-                    <a className='block px-2 py-1 text-gray-900 rounded-lg hover:bg-orange-500 hover:text-orange-300' href="/riders/online" >Posted</a>
-                    <a className='block px-2 py-1 text-gray-900 rounded-lg hover:bg-orange-500 hover:text-orange-300' href="/riders/offline" >Confirmed</a>
+                    <a className='block px-2 py-1 text-orange-300 rounded-lg hover:bg-orange-500 hover:text-orange-300' href="/riders/manage">All</a>
+                    <a className='block px-2 py-1 text-orange-300 rounded-lg hover:bg-orange-500 hover:text-orange-300' href="/riders/online" >Posted</a>
+                    <a className='block px-2 py-1 text-orange-300 rounded-lg hover:bg-orange-500 hover:text-orange-300' href="/riders/offline" >Confirmed</a>
         
                 </div>
             );
@@ -43,11 +43,11 @@ export class OrderSideBarButton extends Component {
         return (
 
             <li className="flex-1 m-2" onClick={() => { this.handleClick() }}>
-                <div className="block py-1 px-2 align-middle text-gray-800 no-underline hover:text-orange-300 hover:bg-orange-600 hover:border-orange-300 rounded-lg border-l-0 border-r-0 border-gray-800">
+                <div className="block py-1 px-2 align-middle text-gray-500 no-underline hover:text-orange-300 hover:bg-orange-600 hover:border-orange-300 rounded-lg border-l-0 border-r-0 border-gray-800">
 
                     <div className='flex flex-row justify-between'>
                         <div>
-                            <i className="fab fa-shopify md:pr-3"></i>
+                            <i className="fab fa-shopify w-8"></i>
 
                             <span className=" block text-xs md:inline-block">Orders</span>
                         </div>

@@ -14,7 +14,7 @@ function App() {
     <div className='bg-gray-300'>
       <NavBar />
       <div className='md:w-4/12 w-10M mx-auto fixed rounded-tr-lg rounded-br-lg mt-0'>
-        <div className=' px-0 pt-0 h-95M rounded-tr-lg rounded-br-lg shadow-2xl border-r-0 border-teal-500 border-t-2'>
+        <div className='bg-gray-900 px-0 pt-0 h-95M rounded-tr-lg rounded-br-lg shadow-2xl border-r-0 border-teal-500 border-t-2'>
 
           <div className='flex flex-col h-90M justify-between'>
             <ul className=" ">

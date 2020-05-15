@@ -11,7 +11,7 @@ export class DashboardSideBarButton extends Component {
                 block 
                 py-1 px-2
                 align-middle 
-                text-gray-800
+                text-gray-500
                 no-underline 
                 hover:text-teal-300
                 hover:bg-teal-700

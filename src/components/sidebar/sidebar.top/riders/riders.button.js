@@ -20,9 +20,9 @@ export class RidersSideBarButton extends Component {
         const OpenedDropDownState = () => {
             return (
                 <div className='rounded-lg py-1 ml-6 mb-1 mt-2'>
-                    <a className='block px-2 py-1 text-gray-900 rounded-lg hover:bg-teal-500 hover:text-teal-300' href="/riders/manage">Manage</a>
-                    <a className='block px-2 py-1 text-gray-900 rounded-lg hover:bg-teal-500 hover:text-teal-300' href="/riders/online" >Online</a>
-                    <a className='block px-2 py-1 text-gray-900 rounded-lg hover:bg-teal-500 hover:text-teal-300' href="/riders/offline" >Offline</a>
+                    <a className='block px-2 py-1 text-teal-300 rounded-lg hover:bg-teal-500 hover:text-teal-300' href="/riders/manage">Manage</a>
+                    <a className='block px-2 py-1 text-teal-300 rounded-lg hover:bg-teal-500 hover:text-teal-300' href="/riders/online" >Online</a>
+                    <a className='block px-2 py-1 text-teal-300 rounded-lg hover:bg-teal-500 hover:text-teal-300' href="/riders/offline" >Offline</a>
                 </div>
             );
         }
@@ -39,13 +39,17 @@ export class RidersSideBarButton extends Component {
 
         return (
             <li className="flex-1 m-2" onClick={() => { this.handleClick() }}>
-                <div className="block py-1 px-2 align-middle text-gray-800 no-underline hover:text-teal-300 hover:bg-teal-600 hover:border-teal-300 rounded-lg border-l-0 border-r-0 border-gray-800">
+                <div className="block py-1 px-2 align-middle text-gray-500 no-underline hover:text-teal-300 hover:bg-teal-600 hover:border-teal-300 rounded-lg border-l-0 border-r-0 border-gray-800">
 
                     <div className='flex flex-row justify-between'>
                         <div>
-                            <i className="fas fa-users md:pr-3"></i>
+                            <i className="fas fa-users w-8"></i>
                             <span className="block text-xs md:inline-block">Riders</span>
+
                         </div>
+                        {/* <div>
+                        <span className="block text-xs md:inline-block">Riders</span>
+                        </div> */}
                         <div>
                             {riderDropState
                                 ? <i className="fas fa-chevron-up pr-2"></i>
