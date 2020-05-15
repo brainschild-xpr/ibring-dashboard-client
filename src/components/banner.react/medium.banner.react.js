@@ -9,7 +9,7 @@ export class MDBanner extends Component {
   render() {
     return (
 
-      <div className='flex flex-row'>
+      <div className='flex flex-row '>
         <div className="w-1/4 mx-16 bg-teal-400 shadow-2xl rounded-lg border-2 border-teal-500">
           <DriverBanner />
         </div>

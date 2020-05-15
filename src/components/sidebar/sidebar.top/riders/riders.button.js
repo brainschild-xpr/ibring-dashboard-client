@@ -39,11 +39,11 @@ export class RidersSideBarButton extends Component {
 
         return (
             <li className="flex-1 m-2" onClick={() => { this.handleClick() }}>
-                <div className="block py-1 px-2 align-middle text-gray-500 no-underline hover:text-teal-300 hover:bg-teal-600 hover:border-teal-300 rounded-lg border-l-0 border-r-0 border-gray-800">
+                <div className="block py-1 px-2 align-middle text-gray-500 no-underline hover:text-teal-300 hover:bg-teal-700 hover:border-teal-300 rounded-lg border-l-0 border-r-0 border-gray-800">
 
-                    <div className='flex flex-row justify-between'>
+                    <div className=' flex flex-row justify-between'>
                         <div>
-                            <i className="fas fa-users w-8"></i>
+                            <i className=" mr-1 fas fa-users w-8 text-teal-500"></i>
                             <span className="block text-xs md:inline-block">Riders</span>
 
                         </div>

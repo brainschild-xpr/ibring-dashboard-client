@@ -58,7 +58,7 @@ export class EarningSideBarButton extends Component {
                 border-l-0 border-r-0 border-gray-800">
                     <div className='flex flex-row justify-between'>
                         <div>
-                            <i className="fas fa-dollar-sign w-8"></i>
+                            <i className="mr-1 fas fa-dollar-sign w-8 text-red-500 hover:text-red-200"></i>
 
                             <span className="
                 block

@@ -8,6 +8,9 @@ import { MDBanner } from './components/banner.react/medium.banner.react';
 // import { SectionThree } from './components/section.3/section3';
 import { SideBarTop } from './components/sidebar/sidebar.top/sidebar.top';
 import { SideBarBottom } from './components/sidebar/sidebar.bottom/sidebar.bottom';
+// import LogRocket from 'logrocket'
+// LogRocket.init('keubzn/ibring_logs')
+// LogRocket.identify('matt')
 
 function App() {
   return (
@@ -24,7 +27,7 @@ function App() {
               <SideBarBottom />
             </ul>
           </div>
-          
+
         </div>
       </div>
 
@@ -32,18 +35,14 @@ function App() {
         <div className='sm:w-5/6 w-90M'>
           <MDBanner />
           {/* <div className='overflow-auto h-63M mt-2'> */}
-          <div className='bg-teal-600 h-63M px-6 py-10 rounded-lg mt-2'>
-            Middle
-         </div>
-          <div className='bg-orange-600 h-63M mt-2 px-6 py-10 rounded-lg'>
-            Middle
-         </div>
-          <div className='bg-blue-600 h-63M mt-2 px-6 py-10 rounded-lg'>
-            Middle
-         </div>
-          <div className='bg-red-600 h-63M mt-2 px-6 py-10 rounded-lg'>
-            Middle
-         </div>
+
+          <div className='flex bg-teal-600 rounded-lg my-2'>
+            <div className='bg-orange-600 h-63M w-1/2 ml-2 mr-1 my-2 px-6 py-10 rounded-lg'>
+              Middle</div>
+            <div className='bg-orange-600 h-63M w-1/2 ml-1 mr-2 my-2 px-6 py-10 rounded-lg'>
+              Middle</div>
+          </div>
+
         </div>
         {/* </div> */}
 
