@@ -3,7 +3,11 @@ const initialState = {
         { id: 1, fname: 'Martin', sname: 'Shungoh', mode: 'Motorcycle' },
         { id: 2, fname: 'Bene', sname: 'Shungoh', mode: 'Small Car' },
         { id: 3, fname: 'Cate', sname: 'Shungoh', mode: 'Jeep' },
-        { id: 4, fname: 'Phynee', sname: 'Shungoh', mode: 'Noah' }
+        { id: 4, fname: 'Phynee', sname: 'Shungoh', mode: 'Noah' },
+        { id: 5, fname: 'Martin', sname: 'Shungoh', mode: 'Motorcycle' },
+        { id: 6, fname: 'Bene', sname: 'Shungoh', mode: 'Small Car' },
+        { id: 7, fname: 'Cate', sname: 'Shungoh', mode: 'Jeep' },
+        { id: 8, fname: 'Phynee', sname: 'Shungoh', mode: 'Noah' }
     ],
     orders: [],
     clients: [],

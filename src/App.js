@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 // import Drivers from './components/drivers.react';
 import { NavBar } from './components/navbar.react';
 // import { WelcomeUsers } from './components/welcome.react';
@@ -8,46 +8,65 @@ import { MDBanner } from './components/banner.react/medium.banner.react';
 // import { SectionThree } from './components/section.3/section3';
 import { SideBarTop } from './components/sidebar/sidebar.top/sidebar.top';
 import { SideBarBottom } from './components/sidebar/sidebar.bottom/sidebar.bottom';
+
+import { connect } from 'react-redux'
 // import LogRocket from 'logrocket'
 // LogRocket.init('keubzn/ibring_logs')
 // LogRocket.identify('matt')
 
-function App() {
-  return (
-    <div className='bg-gray-300'>
-      <NavBar />
-      <div className='md:w-4/12 w-10M mx-auto fixed rounded-tr-lg rounded-br-lg mt-0'>
-        <div className='bg-gray-900 px-0 pt-0 h-95M rounded-tr-lg rounded-br-lg shadow-2xl border-r-0 border-teal-500 border-t-2'>
+class App extends Component {
 
-          <div className='flex flex-col h-90M justify-between'>
-            <ul className=" ">
-              <SideBarTop />
-            </ul>
-            <ul className=" ">
-              <SideBarBottom />
-            </ul>
-          </div>
+  render() {
+    console.log(this.props);
+    const { drivers } = this.props
 
+    const DriverList = drivers.map(driver => {
+      return <div className=' flex-col bg-gray-400' key={driver.id}>
+        <div className='flex-1  text-gray-700 text-center bg-gray-300 px-4 py-2 m-2'>
+          {driver.fname} {driver.sname} {driver.mode}
         </div>
       </div>
 
-      <div className=' flex flex-row md:justify-end h-auto mx-3'>
-        <div className='sm:w-5/6 w-90M'>
-          <MDBanner />
-          {/* <div className='overflow-auto h-63M mt-2'> */}
+    })
 
-          <div className='flex bg-teal-600 rounded-lg my-2'>
-            <div className='bg-orange-600 h-63M w-1/2 ml-2 mr-1 my-2 px-6 py-10 rounded-lg'>
-              Middle</div>
-            <div className='bg-orange-600 h-63M w-1/2 ml-1 mr-2 my-2 px-6 py-10 rounded-lg'>
-              Middle</div>
+
+
+    return (
+      <div className='bg-gray-300'>
+        <NavBar />
+        <div className='md:w-4/12 w-10M mx-auto fixed rounded-tr-lg rounded-br-lg mt-0'>
+          <div className='bg-gray-900 px-0 pt-0 h-95M rounded-tr-lg rounded-br-lg shadow-2xl border-r-0 border-teal-500 border-t-2'>
+
+            <div className='flex flex-col h-90M justify-between'>
+              <ul className=" ">
+                <SideBarTop />
+              </ul>
+              <ul className=" ">
+                <SideBarBottom />
+              </ul>
+            </div>
+
           </div>
-
         </div>
-        {/* </div> */}
+
+        <div className=' flex flex-row md:justify-end h-auto mx-3'>
+          <div className='sm:w-5/6 w-90M'>
+            <MDBanner />
+            {/* <div className='overflow-auto h-63M mt-2'> */}
+
+            <div className='flex bg-teal-600 rounded-lg my-2'>
+              <div className='bg-orange-600 h-63M w-1/2 ml-2 mr-1 my-2 px-6 py-10 rounded-lg'>
+                {DriverList}
+              </div>
+              <div className='bg-orange-600 h-63M w-1/2 ml-1 mr-2 my-2 px-6 py-10 rounded-lg'>
+                Middle</div>
+            </div>
+
+          </div>
+          {/* </div> */}
 
 
-        {/* <div className='flex flex-col w-1/6 md:hidden lg:block'>
+          {/* <div className='flex flex-col w-1/6 md:hidden lg:block'>
           <div className='bg-gray-500 p-6 m-2 h-31M rounded-lg shadow-xl'>
             Right
           </div>
@@ -59,12 +78,17 @@ function App() {
           </div>
         </div> */}
 
-      </div >
-    </div>
-  );
+        </div >
+      </div>
+    );
+  }
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  drivers: state.drivers
+})
+
+export default connect(mapStateToProps)(App)
 
 
 
