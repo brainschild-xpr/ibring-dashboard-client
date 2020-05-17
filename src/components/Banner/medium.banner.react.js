@@ -7,11 +7,14 @@ import { EarningBanner } from './banners/earning.banner'
 
 export class MDBanner extends Component {
   render() {
+    const driversLength = this.props.drivers
+    console.log(driversLength);
+    
     return (
 
       <div className='flex flex-row '>
         <div className="w-1/4 mx-16 bg-teal-400 shadow-2xl rounded-lg border-2 border-teal-500">
-          <DriverBanner />
+          <DriverBanner number={driversLength} />
         </div>
 
         <div className="w-1/4 mr-8 bg-orange-500 shadow-2xl rounded-lg border-2 border-orange-500">

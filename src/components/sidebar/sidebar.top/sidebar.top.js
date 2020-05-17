@@ -5,14 +5,17 @@ import { OrderSideBarButton } from './orders/order.button';
 import { RidersSideBarButton } from './riders/riders.button';
 import { DeliverySideBarButton } from './delivery/delivery.button';
 import { EarningSideBarButton } from './earnings/earning.button';
+import { NavBarSideBar } from '../../NavBar/navbar.sidebar';
+
 
 export class SideBarTop extends Component {
     render() {
         return (
-            <div className='rounded-lg relative'>
+            <div className='rounded-lg relative border-teal-400 border-t-0'>
+
                 <DashboardSideBarButton />
-                <RidersSideBarButton/>
-                <OrderSideBarButton/>
+                <RidersSideBarButton />
+                <OrderSideBarButton />
                 <DeliverySideBarButton />
                 <EarningSideBarButton />
             </div>

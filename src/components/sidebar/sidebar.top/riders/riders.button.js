@@ -22,7 +22,7 @@ export class RidersSideBarButton extends Component {
                 <div className='rounded-lg py-1 ml-6 mb-1 mt-2'>
                     <a className='block px-2 py-1 text-teal-300 rounded-lg hover:bg-teal-500 hover:text-teal-300' href="/riders/manage">Manage</a>
                     <a className='block px-2 py-1 text-teal-300 rounded-lg hover:bg-teal-500 hover:text-teal-300' href="/riders/online" >Online</a>
-                    <a className='block px-2 py-1 text-teal-300 rounded-lg hover:bg-teal-500 hover:text-teal-300' href="/riders/offline" >Offline</a>
+                    {/* <a className='block px-2 py-1 text-teal-300 rounded-lg hover:bg-teal-500 hover:text-teal-300' href="/riders/offline" >Offline</a> */}
                 </div>
             );
         }

@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 export class DriverBanner extends Component {
     render() {
+        const { number } = this.props
         return (
             <div className=''>
                 <div className='bg-teal-600 rounded-lg'>
@@ -17,11 +18,11 @@ export class DriverBanner extends Component {
                 <div className='flex flex-col text-lg pt-1'>
                     <div className='flex justify-between pl-2 pr-2'>
                         <h1 className='text-teal-900'>Online :</h1>
-                        <h1 className='text-teal-900'>30</h1>
+        <h1 className='text-teal-900'>{number}</h1>
                     </div>
                     <div className='flex justify-between pl-2 pr-2'>
                         <h1 className='text-teal-900'>On Delivery :</h1>
-                        <h1 className='text-teal-900'>5</h1>
+                        <h1 className='text-teal-900'>{number}</h1>
                     </div>
                 </div>
             </div>

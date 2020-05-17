@@ -8,23 +8,9 @@ export class DashboardSideBarButton extends Component {
                 <li className="flex-1 m-2">
                     <a href="/dashboard"
                         className="
-                block 
-                py-1 px-2
-                align-middle 
-                text-gray-500
-                no-underline 
-                hover:text-teal-300
-                hover:bg-teal-700
-                hover:border-teal-300
-                rounded-lg 
-                border-l-0 border-r-0 border-gray-800">
-
-                        <i className="fas fa-tachometer-alt md:pr-3 text-black-500"></i>
-
-                        <span className="
-                block
-                text-xs
-                md:inline-block">
+                block0 py-1 px-2 rounded-lg align-middle text-gray-500 no-underline hover:text-gray-900 hover:bg-white hover:border-white">
+                        <i className="fas fa-tachometer-alt md:pr-3 text-black-500 w-8"></i>
+                        <span className="block text-xs md:inline-block">
                             Dashboard
                 </span>
                     </a>
