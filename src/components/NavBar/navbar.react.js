@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import ibring_green from '../../icons/ibring_logo_green.jpeg'
+// import ibring_green from '../../icons/ibring_logo_green.jpeg'
 
 export class NavBar extends Component {
 

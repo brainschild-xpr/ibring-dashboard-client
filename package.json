@@ -9,13 +9,16 @@
     "axios": "^0.19.2",
     "logrocket": "^1.0.7",
     "react": "^16.13.1",
+    "react-datepicker": "^2.16.0",
     "react-dom": "^16.13.1",
     "react-logger": "^1.1.0",
+    "react-moment": "^0.9.7",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "websocket": "^1.0.31"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -23,7 +26,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:12345",
+  "proxy": "http://192.168.88.253:12345",
   "eslintConfig": {
     "extends": "react-app"
   },

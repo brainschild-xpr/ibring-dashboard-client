@@ -70,6 +70,42 @@ height: 95vh;
   height: 80vh;
 }
 
+.center {
+  margin: auto;
+  width: 50%;
+  max-width: 400px;
+  min-width: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  font-size: 20px;
+}
+div.loader {
+  font-size: 100px;
+}
 
+.loaded {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 
+.react-datepicker__input-container > input {
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  color: white;
+  border-bottom: 2px solid #49c5b6;
+}
 
+.react-datepicker__input-container {
+  border: none;
+  background-color: transparent;
+  color: white;
+  border-bottom: 2px solid #49c5b6;
+}
+
+.ibring_green{
+  background-color: #49c5b6;
+}

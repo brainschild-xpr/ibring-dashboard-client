@@ -24,10 +24,15 @@
 import { combineReducers } from 'redux'
 
 import { driverReducer } from './getDriver.reducer'
+import { confirmedOrderReducer } from "./getConfirmedOrder.reducer";
+import { postedOrderReducer } from './getPostedOrder.reducer'
+import { websocketReducer } from './websocket.reducer'
+import { activityLogReducer } from "./activity.reducer";
 
 export default combineReducers({
     driver: driverReducer,
-    // confirmed: confirmedReducer,
-    // posted: postedReducer,
-    // order: orderReducer
+    websocket: websocketReducer,
+    posted: postedOrderReducer,
+    confirmed: confirmedOrderReducer,
+    activity: activityLogReducer
 })

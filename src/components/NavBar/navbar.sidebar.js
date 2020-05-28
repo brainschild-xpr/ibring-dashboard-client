@@ -9,16 +9,19 @@ export class NavBarSideBar extends Component {
     render() {
 
         return (
-            <div className=' mx-auto h-auto flex-1 text-gray-700 text-center bg-gray-800 sticky'>
+            <div className=' mx-auto h-auto flex-1 text-gray-700 text-center ibring_green sticky pr-3'>
                 <header className='flex items-center justify-between'>
                     <div className=''>
-                        <img src={ibring_green} className='h-12' alt='Ibring Logo'></img>
+                        <img src={ibring_green} className='h-12 bg-opacity-50' alt='Ibring Logo'></img>
                     </div>
+                    <span className='text-3xl text-gray-700'>
+                        {/* ibring */}
+                    </span>
                     {/* <div className='hidden md:block text-gray-900'>DashBoard</div>
                     <div className='hidden md:block text-gray-900'>API</div>
                     <div className='hidden md:block text-gray-900'>Sign In</div>
                     <div className='hidden md:block text-gray-900'>Sign Up</div> */}
-                    {
+                    {/* {
                         this.state.isOpen
                             ?
                             <span className='px-6 text-teal-500 text-xl'>
@@ -27,7 +30,7 @@ export class NavBarSideBar extends Component {
                                 </button>
                             </span>
                             : <i className="fas fa-bars"></i>
-                    }
+                    } */}
                 </header>
             </div>
         )

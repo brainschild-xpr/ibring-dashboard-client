@@ -22,11 +22,10 @@ export class DeliverySideBarButton extends Component {
         const OpenedDropDownState = () => {
             return (
                 <div className='rounded-lg py-1 ml-6 mb-1 mt-2'>
-                    <a className='block px-2 py-1 text-blue-300 rounded-lg hover:bg-blue-500 hover:text-blue-300' href="/riders/manage">Accepted</a>
-                    <a className='block px-2 py-1 text-blue-300 rounded-lg hover:bg-blue-500 hover:text-blue-300' href="/riders/online" >Picked</a>
-                    <a className='block px-2 py-1 text-blue-300 rounded-lg hover:bg-blue-500 hover:text-blue-300' href="/riders/offline" >onDelivery</a>
-                    <a className='block px-2 py-1 text-blue-300 rounded-lg hover:bg-blue-500 hover:text-blue-300' href="/riders/offline" >Cancelled</a>
-                    <a className='block px-2 py-1 text-blue-300 rounded-lg hover:bg-blue-500 hover:text-blue-300' href="/riders/offline" >Delievered</a>
+                    <a className='block px-2 py-1 text-blue-300 rounded-lg hover:bg-blue-500 hover:text-blue-300' href="/delivery/manage">Manage</a>
+                    <a className='block px-2 py-1 text-blue-300 rounded-lg hover:bg-blue-500 hover:text-blue-300' href="/delivery/onDelivery" >onDelivery</a>
+                    <a className='block px-2 py-1 text-blue-300 rounded-lg hover:bg-blue-500 hover:text-blue-300' href="/delivery/cancelled" >Cancelled</a>
+                    <a className='block px-2 py-1 text-blue-300 rounded-lg hover:bg-blue-500 hover:text-blue-300' href="/delivery/delivered" >Delievered</a>
                 </div>
             );
         }

@@ -1,8 +1,17 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+import { getPostedOrders } from '../../../redux/actions/getPostedOrders.action'
+
 export class OrderBanner extends Component {
+
     render() {
+
+        // const { postedOrders, loading, error } = this.props.posted;
+        console.log(this.props);
+        const total = this.props.postedOrders + this.props.confirmedOrders
+
+
         return (
             <div>
                 <div className='bg-orange-600 rounded-lg'>
@@ -17,15 +26,15 @@ export class OrderBanner extends Component {
                 <div className='flex flex-col text-lg pt-1'>
                     <div className='flex justify-between pl-2 pr-2 '>
                         <h1 className='text-orange-900'>All :</h1>
-                        <h1 className='text-orange-900'>30</h1>
+                        <h1 className='text-orange-900'>{total}</h1>
                     </div>
                     <div className='flex justify-between pl-2 pr-2'>
                         <h1 className='text-orange-900'>Posted :</h1>
-                        <h1 className='text-orange-900'>5</h1>
+                        <h1 className='text-orange-900'>{this.props.postedOrders}</h1>
                     </div>
                     <div className='flex justify-between pl-2 pr-2'>
                         <h1 className='text-orange-900'>Confirmed :</h1>
-                        <h1 className='text-orange-900'>25</h1>
+                        <h1 className='text-orange-900'>{this.props.confirmedOrders}</h1>
                     </div>
 
                 </div>
@@ -36,11 +45,11 @@ export class OrderBanner extends Component {
 }
 
 const mapStateToProps = (state) => ({
-
+    posted: state.posted
 })
 
-const mapDispatchToProps = {
+// const mapDispatchToProps = {
 
-}
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(OrderBanner)
+export default connect(mapStateToProps, { getPostedOrders })(OrderBanner)

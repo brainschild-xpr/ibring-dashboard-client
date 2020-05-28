@@ -1,29 +1,29 @@
-import { GET_DRIVERS_LOADING, GET_DRIVERS_SUCCESS, GET_DRIVERS_ERROR } from '../actions/types'
+import actionType from '../actionTypes/types'
 
 const initialState = {
     drivers: [],
-    loading: true,
-    error: null
+    driverLoading: true,
+    driverError: null
 }
 
 export function driverReducer(state = initialState, action) {
     switch (action.type) {
-        case GET_DRIVERS_LOADING:
+        case actionType.GET_DRIVERS_LOADING:
             return {
                 ...state,
-                loading: true
+                driverLoading: true
             }
-        case GET_DRIVERS_SUCCESS:
+        case actionType.GET_DRIVERS_SUCCESS:
             return {
                 ...state,
-                loading: false,
+                driverLoading: false,
                 drivers: action.payload
             }
-        case GET_DRIVERS_ERROR:
+        case actionType.GET_DRIVERS_ERROR:
             return {
                 ...state,
-                loading: false,
-                error: action.error
+                driverLoading: false,
+                driverError: action.error
             }
 
         default:
@@ -33,8 +33,8 @@ export function driverReducer(state = initialState, action) {
     }
 }
 
-export const getDriversSuccess = state => state.drivers;
-export const getDriversError = state => state.error;
-export const getDriversLoading = state => state.loading;
+// export const getDriversSuccess = state => state.drivers;
+// export const getDriversError = state => state.error;
+// export const getDriversLoading = state => state.Loading;
 
 

@@ -23,9 +23,9 @@ export class EarningSideBarButton extends Component {
         const OpenedDropDownState = () => {
             return (
                 <div className='rounded-lg py-1 ml-6 mb-1 mt-2'>
-                    <a className='block px-2 py-1 text-red-300 rounded-lg hover:bg-red-500 hover:text-red-300' href="/riders/manage">All</a>
-                    <a className='block px-2 py-1 text-red-300 rounded-lg hover:bg-red-500 hover:text-red-300' href="/riders/online" >Posted</a>
-                    <a className='block px-2 py-1 text-red-300 rounded-lg hover:bg-red-500 hover:text-red-300' href="/riders/offline" >Confirmed</a>
+                    <a className='block px-2 py-1 text-red-300 rounded-lg hover:bg-red-500 hover:text-red-300' href="/earnings/manage">Manage</a>
+                    {/* <a className='block px-2 py-1 text-red-300 rounded-lg hover:bg-red-500 hover:text-red-300' href="/riders/online" >Posted</a>
+                    <a className='block px-2 py-1 text-red-300 rounded-lg hover:bg-red-500 hover:text-red-300' href="/riders/offline" >Confirmed</a> */}
 
                 </div>
             );

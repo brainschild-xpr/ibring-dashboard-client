@@ -1,9 +1,18 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-export class DriverBanner extends Component {
+// import PropTypes from 'prop-types'
+import { getDrivers } from "../../../redux/actions/getDriver.action";
+
+export class RiderBanner extends Component {
+    componentDidMount() {
+        getDrivers();
+    }
     render() {
+        console.log('Props For Rider: \n', this.props);
         const { number } = this.props
+        const online = 0
+        const onDelivery = 0
         return (
             <div className=''>
                 <div className='bg-teal-600 rounded-lg'>
@@ -17,12 +26,16 @@ export class DriverBanner extends Component {
 
                 <div className='flex flex-col text-lg pt-1'>
                     <div className='flex justify-between pl-2 pr-2'>
+                        <h1 className='text-teal-900'>Riders :</h1>
+                        <h1 className='text-teal-900'>{number}</h1>
+                    </div>
+                    <div className='flex justify-between pl-2 pr-2'>
                         <h1 className='text-teal-900'>Online :</h1>
-        <h1 className='text-teal-900'>{number}</h1>
+                        <h1 className='text-teal-900'>{online}</h1>
                     </div>
                     <div className='flex justify-between pl-2 pr-2'>
                         <h1 className='text-teal-900'>On Delivery :</h1>
-                        <h1 className='text-teal-900'>{number}</h1>
+                        <h1 className='text-teal-900'>{onDelivery}</h1>
                     </div>
                 </div>
             </div>
@@ -31,12 +44,13 @@ export class DriverBanner extends Component {
     }
 }
 
-const mapStateToProps = (state) => ({
+// RiderBanner.propTypes = {
+//     getDrivers: PropTypes.func.isRequired,
+//     driver: PropTypes.object.isRequired
+// }
 
+const mapStateToProps = (state) => ({
+    driver: state.driver,
 })
 
-const mapDispatchToProps = {
-
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(DriverBanner)
+export default connect(mapStateToProps, { getDrivers })(RiderBanner)

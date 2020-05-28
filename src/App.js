@@ -1,26 +1,82 @@
 import React, { Component } from 'react'
 
 
-import HomeDashBoard from './components/Home/home.dash'
+// import HomeDashBoard from './componsents/Home/home.dash'
 import SideBar from './components/Sidebar/sidebar'
-import { NavBar } from './components/NavBar/navbar.react'
-import { MDBanner } from './components/Banner/medium.banner.react'
+// import { NavBar } from './components/NavBar/navbar.react'
+// import { MDBanner } from './components/Banner/medium.banner.react'
 import RoutePages from './components/Routing/route'
+
+import { w3cwebsocket } from 'websocket'
+import { getWebsocketSuccess, setWebsocketLoading } from "./redux/actions/websocket.action";
+import { getActivityLogAll } from "./redux/actions/activity.action";
+import { connect } from 'react-redux';
+import ActivityLog from './components/ActivityLog';
+const wsServer = w3cwebsocket('ws://192.168.88.253:12345')
+
 
 
 
 export class App extends Component {
+
+    componentDidMount() {
+        this.props.getActivityLogAll();
+        // this.props.getDrivers();
+        // this.props.getPostedOrders();
+        // this.props.getConfirmedOrders()
+
+    }
+    UNSAFE_componentWillMount() {
+        wsServer.onopen = () => {
+            console.log('Websocket Connected');
+            this.props.setWebsocketLoading()
+        }
+        wsServer.onmessage = (message) => {
+            const data = JSON.parse(message.data)
+            console.log(data);
+
+            switch (data.action) {
+                case 'request':
+                    console.log(data.connectionID);
+                    wsServer.send(
+                        JSON.stringify(
+                            {
+                                action: 'connectDashboard',
+                                driverUID: 'react-front-end'
+                            }
+                        )
+                    )
+                    break;
+                case 'connectAppEvent':
+                    console.log('DashBoard Connected');
+                    this.props.getWebsocketSuccess(data)
+                    // wsServer.send(
+                    //     JSON.stringify(
+                    //         {
+                    //             action: 'status',
+                    //             id: data.connectionID
+                    //         }
+                    //     )
+                    // )
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
     render() {
+        const { activity } = this.props.activity
         return (
             <div className='flex'>
-                <div className='w-2/12'>
+                <div className='w-1/12'>
                     <SideBar />
                 </div>
 
-                <div className='w-10/12'>
-                   
+                <div className='w-8/12'>
+
                     {/* <MDBanner /> */}
-                    <RoutePages/>
+                    <RoutePages />
                     {/* <div className='flex bg-teal-600 rounded-lg my-2'>
                         <div className='bg-orange-600 h-63M w-1/2 ml-2 mr-1 my-2 px-6 py-10 rounded-lg'>
                             Middle
@@ -29,12 +85,22 @@ export class App extends Component {
                             Middle</div>
                     </div> */}
                 </div>
+                <div className='w-3/12'>
+                    <ActivityLog activity={activity} />
+                </div>
             </div>
         )
     }
 }
 
-export default App
+const mapStateToProps = (state) => ({
+    driver: state.driver,
+    posted: state.posted,
+    websocket: state.websocket,
+    activity: state.activity
+})
+
+export default connect(mapStateToProps, { getWebsocketSuccess, setWebsocketLoading, getActivityLogAll })(App)
 
 
 
