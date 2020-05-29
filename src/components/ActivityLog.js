@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import DatePicker from 'react-datepicker';
+import { AnimatedList } from 'react-animated-list'
 import "react-datepicker/dist/react-datepicker.css";
 import Moments from 'react-moment'
 
@@ -25,7 +26,7 @@ class ActivityLog extends Component {
 
 
             <div className='bg-gray-700 text-center h-screen pt-2'>
-                <div className='flex flex-row content-center justify-between'>
+                <div className='flex flex-row content-center justify-between pb-1'>
                     <div>
                         <DatePicker
                             selected={this.state.startDate}
@@ -39,51 +40,185 @@ class ActivityLog extends Component {
                         />
                     </div>
 
-                    <div className='mx-4 text-gray-300'>
-                        <p>ActivityLog</p>
+                    <div className='mr-4'>
+                        <p className='text-teal-300'>ActivityLog</p>
                     </div>
 
                 </div>
-                <div className='flex bg-gray-600 p-2 mx-0 mt-0 rounded flex-row overflow-auto  '>
-                    {activityArray.map(({ riderObj }) => {
-                        return (
-                            <button>
+                <div className='flex bg-gray-600 rounded flex-row overflow-auto'>
+                    <AnimatedList animation={'grow'}>
+                        {activityArray.map(({ riderObj, timestamp }) => {
+                            // console.log(riderObj);
 
-                                <div className='flex flex-row '>
-                                    <div className=' flex-col px-2 py-2 '>
-                                        <div className='w-16 h-16 self-center'>
-                                            <img src={riderObj.driverPhoto} alt='Monkey D Luffy' className='w-full h-full rounded-full border-solid border-white border-2 object-cover' /></div>
-                                        <div>
-                                            <p>
-                                                {riderObj.driverFname}
-                                            </p>
+                            return (
+                                <div className='p-2' key={timestamp}>
+                                    <button>
 
+                                        {/* <div className='flex flex-row '> */}
+                                        <div className='flex-col content-between'>
+                                            <div className='w-16 h-16 self-center'>
+                                                <img src={riderObj.driverPhoto} alt='Monkey D Luffy' className='w-16 h-16 rounded-full border-solid border-white border-2 object-cover' /></div>
+                                            <div>
+                                                <p>
+                                                    {riderObj.driverFname}
+                                                </p>
+
+                                            </div>
                                         </div>
-                                    </div>
+                                        {/* </div> */}
+                                    </button>
                                 </div>
-                            </button>
-                        );
-                    })}
+                            );
+                        })}
+                    </AnimatedList>
 
                 </div>
-                {activityArray.map(({ timestamp, activitySync, _id, riderObj }) => {
-                    const dateObj = new Date(timestamp)
-                    return <div className='flex flex-row bg-gray-600 p-2 mx-2 mt-2 rounded justify-start' key={timestamp}>
-                        <div className='flex rounded-full w-24 h-24 self-center'>
-                            <img src={riderObj.driverPhoto} alt='Monkey D Luffy' className='w-full h-full rounded-full border-solid border-white border-2 object-cover' />
-                        </div>
-                        <div className='w-4/5 text-left pl-4 text-gray-400'>
-                            {/* <Moments timestamp/> */}
-                            {/* <p> {_id}</p> */}
-                            {riderObj.driverFname + " " + riderObj.driverSname}
-                            <p>{dateObj.getFullYear() + "/" + dateObj.getMonth() + "/" + dateObj.getDate()} </p>
-                            <p>{dateObj.getHours() + ":" + dateObj.getMinutes()} </p>
+                <AnimatedList animation={'fade'}>
+                    {activityArray.map(({ timestamp, activitySync, activityBackup, _id, riderObj }) => {
+                        console.log('Activity Backup', activityBackup);
+
+                        const dateObj = new Date(timestamp)
+
+                        const bakTime = new Date(timestamp)
+
+                        const bakHours = bakTime.getHours()
+                        let newBakHour
+                        if (bakHours <= 9) {
+                            newBakHour = '0' + bakHours.toString()
+                            console.log('newBakHour', newBakHour)
+                        } else {
+                            newBakHour = bakHours
+                        }
+
+                        const bakMins = bakTime.getMinutes()
+                        let newBakMins
+                        if (bakMins <= 9) {
+                            newBakMins = '0' + bakMins.toString()
+                            console.log('newBakMins', newBakMins)
+                        }
+                        else {
+                            newBakMins = bakMins
+                        }
+
+                        const bakYear = bakTime.getUTCFullYear()
+                        let newBakYear
+                        if (bakYear <= 9) {
+                            newBakYear = '0' + bakYear.toString()
+                            console.log('newBakYear', newBakYear)
+                        } else {
+                            newBakYear = bakYear
+                        }
+
+                        const bakMonths = bakTime.getMonth()
+                        let newBakMonths
+                        if (bakMonths <= 9) {
+                            newBakMonths = '0' + bakMonths.toString()
+                            console.log('newBakMonths', newBakMonths)
+                        } else {
+                            newBakMonths = bakMonths
+                        }
+
+                        const bakDate = bakTime.getDate()
+                        let newBakDate
+                        if (bakDate <= 9) {
+                            newBakDate = '0' + bakDate.toString()
+                            console.log('newBakDate', newBakDate)
+                        } else {
+                            newBakDate = bakDate
+                        }
+
+                        // const bakMins = bakTime.getMinutes()
+                        // let newBakMins
+                        // if (bakMins <= 9) {
+                        //     newBakMins = '0' + bakMins.toString()
+                        //     console.log('newBakMins', newBakMins)
+                        // }
+                        // else {
+                        //     newBakMins = bakMins
+                        // }
+                        let activitySyncStatus = Object.keys(activitySync)
+                        console.log('\nActivity Status\n', activitySyncStatus[0]);
 
 
-                            <p className='text-teal-300'>- {activitySync['CONNECTAPP'].action}</p>
+
+                        let activitySyncStatusConnect
+
+
+                        switch (activitySyncStatus[0]) {
+                            case 'CONNECTAPP':
+                                activitySyncStatusConnect = 'App Connected'
+                                break;
+
+                            case 'REACTCONNECT':
+                                activitySyncStatusConnect = 'React Connected'
+                                break;
+
+                            default:
+                                break;
+                        }
+
+                        // if (activitySync['CONNECTAPP'].action === 'APP_ACTIVITY_CONNECTAPP') {
+                        //     activitySyncStatusConnect = 'RiderConnected'
+                        // } else if (activitySync['REACTCONNECT'].action === 'REACT-FRONTEND') {
+                        //     activitySyncStatusConnect = 'React COnnected'
+                        // }
+
+                        return <div className='flex flex-row bg-gray-600 p-2 mx-2 mt-2 rounded justify-between' key={timestamp}>
+                            <div className='w-2/12 p-1'>
+                                <div className='flex rounded-full self-center'>
+                                    <img src={riderObj.driverPhoto} alt={riderObj.driverSname} className='w-16 h-16 rounded-full border-solid border-white border-2 object-cover' />
+                                </div>
+                            </div>
+
+                            <div className='w-10/12 text-left text-gray-400 justify-between p-1'>
+                                <div className='flex flex-row justify-between'>
+                                    <p className='text-xl'>{riderObj.driverFname + " " + riderObj.driverSname}</p>
+                                    <p>{newBakHour + "" + newBakMins + " Hrs"} </p>
+
+                                </div>
+
+                                <div className='flex flex-row justify-between'>
+                                    <p className='text-teal-300'>{
+                                        activitySyncStatusConnect
+                                    }</p>
+                                    <p>{newBakDate + "/" + newBakMonths + "/" + newBakYear + ' '}</p>
+                                </div>
+
+                                {/* <p className='text-teal-300'>- {activityBackup[0].action}</p> */}
+                                {/* <div className='text-teal-300 bg-gray-700 rounded-l p-2'>{activityBackup.map(({ _id, action }) => {
+                                // const unixEpoch = new Date(_id);
+                                // console.log(unixEpoch);
+                                const bakTime = new Date(_id)
+
+                                const bakHours = bakTime.getHours()
+                                let newBakHour
+                                if (bakHours <= 9) {
+                                    newBakHour = '0' + bakHours.toString()
+                                    console.log('newBakHour', newBakHour)
+                                } else {
+                                    newBakHour = bakHours
+                                }
+
+                                const bakMins = bakTime.getMinutes()
+                                let newBakMins
+                                if (bakMins <= 9) {
+                                    newBakMins = '0' + bakMins.toString()
+                                    console.log('newBakMins', newBakMins)
+                                }
+                                else {
+                                    newBakMins = bakMins
+                                }
+
+                                return <div>
+                                    <p>{action}</p>
+                                    <p>{' At ' + newBakHour + '' + newBakMins + " Hrs"}</p>
+
+                                </div>
+                            })}</div> */}
+                            </div>
                         </div>
-                    </div>
-                })}
+                    })}
+                </AnimatedList>
                 {/* <div className='flex flex-row bg-gray-600 p-2 mx-2 mt-2 rounded justify-start'> */}
                 {/* <div className='rounded-full w-12 h-12'>
                         <img src='https://www.alfabetajuega.com/wp-content/uploads/2020/04/one-piece-luffy-wano.jpg' alt='Monkey D Luffy' className='h-full rounded-full border-solid border-white border-2 object-cover' />

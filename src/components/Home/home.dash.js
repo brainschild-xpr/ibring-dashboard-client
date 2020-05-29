@@ -89,10 +89,10 @@ class HomeDashBoard extends Component {
                         {DataAvailable}
 
                         <div className='flex flex-row'>
-                            <div className='w-1/3 m-1'>
+                            <div className='w-1/2 m-1'>
                                 {DriverList}
                             </div>
-                            <div className='w-2/3 m-1'>
+                            <div className='w-1/2 m-1'>
                                 {DriverList}
                             </div>
 

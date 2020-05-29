@@ -12,7 +12,7 @@ import { getWebsocketSuccess, setWebsocketLoading } from "./redux/actions/websoc
 import { getActivityLogAll } from "./redux/actions/activity.action";
 import { connect } from 'react-redux';
 import ActivityLog from './components/ActivityLog';
-const wsServer = w3cwebsocket('ws://192.168.88.253:12345')
+const wsServer = w3cwebsocket('ws://46.101.5.146:12345')
 
 
 
