@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import DatePicker from 'react-datepicker';
 import { AnimatedList } from 'react-animated-list'
-import "react-datepicker/dist/react-datepicker.css";
-import Moments from 'react-moment'
+import "react-datepicker/dist/react-datepicker.css"
 
 class ActivityLog extends Component {
     state = {
@@ -25,8 +24,8 @@ class ActivityLog extends Component {
         return (
 
 
-            <div className='bg-gray-700 text-center h-screen pt-2'>
-                <div className='flex flex-row content-center justify-between pb-1'>
+            <div className='bg-gray-700 text-center h-screen lg:w-full lg:block hidden pt-2'>
+                <div className='flex flex-row content-center justify-between pt-2 pb-1'>
                     <div>
                         <DatePicker
                             selected={this.state.startDate}
@@ -52,32 +51,30 @@ class ActivityLog extends Component {
 
                             return (
                                 <div className='p-2' key={timestamp}>
-                                    <button>
 
-                                        {/* <div className='flex flex-row '> */}
-                                        <div className='flex-col content-between'>
-                                            <div className='w-16 h-16 self-center'>
-                                                <img src={riderObj.driverPhoto} alt='Monkey D Luffy' className='w-16 h-16 rounded-full border-solid border-white border-2 object-cover' /></div>
-                                            <div>
-                                                <p>
-                                                    {riderObj.driverFname}
-                                                </p>
+                                    {/* <div className='flex flex-row '> */}
+                                    <div className='flex-col content-between'>
+                                        <div className='w-16 h-16 self-center'>
+                                            <img src={riderObj.driverPhoto} alt='Monkey D Luffy' className='w-16 h-16 rounded-full border-solid border-white border-2 object-cover' /></div>
+                                        <div>
+                                            <p>
+                                                {riderObj.driverFname}
+                                            </p>
 
-                                            </div>
                                         </div>
-                                        {/* </div> */}
-                                    </button>
+                                    </div>
+                                    {/* </div> */}
                                 </div>
                             );
                         })}
                     </AnimatedList>
 
-                </div>
-                <AnimatedList animation={'fade'}>
+                </div >
+                <AnimatedList animation={'slide'}>
                     {activityArray.map(({ timestamp, activitySync, activityBackup, _id, riderObj }) => {
                         console.log('Activity Backup', activityBackup);
 
-                        const dateObj = new Date(timestamp)
+                        // const dateObj = new Date(timestamp)
 
                         const bakTime = new Date(timestamp)
 
@@ -164,15 +161,15 @@ class ActivityLog extends Component {
                         // }
 
                         return <div className='flex flex-row bg-gray-600 p-2 mx-2 mt-2 rounded justify-between' key={timestamp}>
-                            <div className='w-2/12 p-1'>
+                            <div className='w-3/12 p-1'>
                                 <div className='flex rounded-full self-center'>
                                     <img src={riderObj.driverPhoto} alt={riderObj.driverSname} className='w-16 h-16 rounded-full border-solid border-white border-2 object-cover' />
                                 </div>
                             </div>
 
-                            <div className='w-10/12 text-left text-gray-400 justify-between p-1'>
+                            <div className='w-9/12 text-left text-gray-400 justify-between p-1'>
                                 <div className='flex flex-row justify-between'>
-                                    <p className='text-xl'>{riderObj.driverFname + " " + riderObj.driverSname}</p>
+                                    <p className='text-l'>{riderObj.driverFname + " " + riderObj.driverSname}</p>
                                     <p>{newBakHour + "" + newBakMins + " Hrs"} </p>
 
                                 </div>
@@ -225,7 +222,7 @@ class ActivityLog extends Component {
                     </div>
                     <div className='w-4/5 text-left pl-4'>
                         <p>Martin Shungoh</p>
-                        <Moments />
+                        < />
                         <p>{Date()}</p>
                         <p>{Date()}</p>
 

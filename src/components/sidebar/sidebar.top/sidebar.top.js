@@ -5,6 +5,7 @@ import { OrderSideBarButton } from './orders/order.button';
 import { RidersSideBarButton } from './riders/riders.button';
 import { DeliverySideBarButton } from './delivery/delivery.button';
 import { EarningSideBarButton } from './earnings/earning.button';
+import { GoogleMapsSidebarButton } from './googlemap/googlemaps.button';
 // import { NavBarSideBar } from s'../../NavBar/navbar.sidebar';
 
 
@@ -18,6 +19,7 @@ export class SideBarTop extends Component {
                 <OrderSideBarButton />
                 <DeliverySideBarButton />
                 <EarningSideBarButton />
+                <GoogleMapsSidebarButton />
             </div>
         )
     }

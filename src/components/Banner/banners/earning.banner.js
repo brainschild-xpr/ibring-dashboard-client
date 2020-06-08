@@ -16,20 +16,20 @@ export class EarningBanner extends Component {
 
                 <div className='flex flex-col text-lg pt-1'>
                     <div className='flex justify-between pl-2 pr-2'>
-                        <h1 className='text-red-900'>Total :</h1>
-                        <h1 className='text-red-900'>25000</h1>
+                        <h1 className='text-gray-300'>Total :</h1>
+                        <h1 className='text-gray-300'>25000</h1>
                     </div>
                     <div className='flex justify-between pl-2 pr-2'>
-                        <h1 className='text-red-900'>Daily :</h1>
-                        <h1 className='text-red-900'>500</h1>
+                        <h1 className='text-gray-300'>Daily :</h1>
+                        <h1 className='text-gray-300'>500</h1>
                     </div>
                     <div className='flex justify-between pl-2 pr-2'>
-                        <h1 className='text-red-900'>Weekly :</h1>
-                        <h1 className='text-red-900'>3500</h1>
+                        <h1 className='text-gray-300'>Weekly :</h1>
+                        <h1 className='text-gray-300'>3500</h1>
                     </div>
                     <div className='flex justify-between pl-2 pr-2'>
-                        <h1 className='text-red-900'>Monthly :</h1>
-                        <h1 className='text-red-900'>15000</h1>
+                        <h1 className='text-gray-300'>Monthly :</h1>
+                        <h1 className='text-gray-300'>15000</h1>
                     </div>
                 </div>
 

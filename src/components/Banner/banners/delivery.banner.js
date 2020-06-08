@@ -16,24 +16,24 @@ export class DeliveryBanner extends Component {
 
                 <div className='flex flex-col text-lg pt-1'>
                     <div className='flex justify-between pl-2 pr-2'>
-                        <h1 className='text-blue-900'>Accepted :</h1>
-                        <h1 className='text-blue-900'>30</h1>
+                        <h1 className='text-gray-300'>Accepted :</h1>
+                        <h1 className='text-gray-300'>30</h1>
                     </div>
                     <div className='flex justify-between pl-2 pr-2'>
-                        <h1 className='text-blue-900'>Picked :</h1>
-                        <h1 className='text-blue-900'>5</h1>
+                        <h1 className='text-gray-300'>Picked :</h1>
+                        <h1 className='text-gray-300'>5</h1>
                     </div>
                     <div className='flex justify-between pl-2 pr-2'>
-                        <h1 className='text-blue-900'>onDelivery :</h1>
-                        <h1 className='text-blue-900'>25</h1>
+                        <h1 className='text-gray-300'>onDelivery :</h1>
+                        <h1 className='text-gray-300'>25</h1>
                     </div>
                     <div className='flex justify-between pl-2 pr-2'>
-                        <h1 className='text-blue-900'>Cancelled :</h1>
-                        <h1 className='text-blue-900'>25</h1>
+                        <h1 className='text-gray-300'>Cancelled :</h1>
+                        <h1 className='text-gray-300'>25</h1>
                     </div>
                     <div className='flex justify-between pl-2 pr-2'>
-                        <h1 className='text-blue-900'>Delivered :</h1>
-                        <h1 className='text-blue-900'>25</h1>
+                        <h1 className='text-gray-300'>Delivered :</h1>
+                        <h1 className='text-gray-300'>25</h1>
                     </div>
 
                 </div>

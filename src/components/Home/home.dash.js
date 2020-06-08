@@ -14,7 +14,7 @@ import { NavBar } from '../NavBar/navbar.react';
 import { getDrivers } from '../../redux/actions/getDriver.action'
 import { getPostedOrders } from '../../redux/actions/getPostedOrders.action'
 import { getConfirmedOrders } from '../../redux/actions/getConfirmedOrders.action'
-import { getActivityLogAll, getActivityLogUid } from "../../redux/actions/activity.action";
+import { getActivityLogAll } from "../../redux/actions/activity.action";
 // import { getWebsocketSuccess } from "../../redux/actions/websocket.action";
 // import PropTypes from 'prop-types'
 // import { increment, decrement } from '../../redux/actions/counter.action';
@@ -35,7 +35,7 @@ class HomeDashBoard extends Component {
     render() {
         console.log('Props For Dashboard: \n', this.props);
         const { drivers, driverLoading, driverError } = this.props.driver;
-        const { activity } = this.props.activity
+        // const { activity } = this.props.activity
         // const loading = false
         const { postedOrders
             // , postedLoading, postedError 
@@ -51,7 +51,7 @@ class HomeDashBoard extends Component {
 
         const DriverList = drivers.map(({ id, uid, firstName, secondName }) => (
             <div className=' flex-col bg-gray-400 w-full' key={uid}>
-                <div className='flex-1  text-gray-700 text-center bg-gray-300 px-4 py-2 m-2'>
+                <div className='flex-1  text-gray-700 text-center bg-gray-300 px-0 py-2 m-2'>
                     {firstName} {secondName} {uid}
                 </div>
             </div>
@@ -85,7 +85,7 @@ class HomeDashBoard extends Component {
                 :
                 driverError === null
                     ?
-                    <div className='bg-gray-400'>
+                    <div className='bg-gray-400 h-full'>
                         {DataAvailable}
 
                         <div className='flex flex-row'>

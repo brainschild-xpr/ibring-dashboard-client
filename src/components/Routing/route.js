@@ -4,6 +4,7 @@ import HomeDashBoard from '../Home/home.dash'
 // import Counter from '../Counter/counter'
 import { RidersManage } from '../Rider/riders.manage'
 import { RidersOnline } from '../Rider/riders.online'
+import { GoogleMapsManage } from '../GoogleMaps/googlemaps.manage'
 
 export default function RoutePages() {
     return (
@@ -27,6 +28,12 @@ export default function RoutePages() {
                 <Route path="/riders/online" exact>
                     <RidersOnline />
                 </Route> />
+
+                {/* Route to Riders Online Home from '/riders/online */}
+                <Route path="/googlemaps/manage" exact>
+                    <GoogleMapsManage />
+                </Route> />
+
             </Switch>
         </Router>
     )

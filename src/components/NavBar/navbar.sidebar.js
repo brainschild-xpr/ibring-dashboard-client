@@ -14,9 +14,9 @@ export class NavBarSideBar extends Component {
                     <div className=''>
                         <img src={ibring_green} className='h-12 bg-opacity-50' alt='Ibring Logo'></img>
                     </div>
-                    <span className='text-3xl text-gray-700'>
+                    <p className='text-3xl text-gray-700'>
                         {/* ibring */}
-                    </span>
+                    </p>
                     {/* <div className='hidden md:block text-gray-900'>DashBoard</div>
                     <div className='hidden md:block text-gray-900'>API</div>
                     <div className='hidden md:block text-gray-900'>Sign In</div>

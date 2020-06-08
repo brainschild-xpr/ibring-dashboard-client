@@ -25,16 +25,16 @@ export class OrderBanner extends Component {
 
                 <div className='flex flex-col text-lg pt-1'>
                     <div className='flex justify-between pl-2 pr-2 '>
-                        <h1 className='text-orange-900'>All :</h1>
-                        <h1 className='text-orange-900'>{total}</h1>
+                        <h1 className='text-gray-300'>All :</h1>
+                        <h1 className='text-gray-300'>{total}</h1>
                     </div>
                     <div className='flex justify-between pl-2 pr-2'>
-                        <h1 className='text-orange-900'>Posted :</h1>
-                        <h1 className='text-orange-900'>{this.props.postedOrders}</h1>
+                        <h1 className='text-gray-300'>Posted :</h1>
+                        <h1 className='text-gray-300'>{this.props.postedOrders}</h1>
                     </div>
                     <div className='flex justify-between pl-2 pr-2'>
-                        <h1 className='text-orange-900'>Confirmed :</h1>
-                        <h1 className='text-orange-900'>{this.props.confirmedOrders}</h1>
+                        <h1 className='text-gray-300'>Confirmed :</h1>
+                        <h1 className='text-gray-300'>{this.props.confirmedOrders}</h1>
                     </div>
 
                 </div>

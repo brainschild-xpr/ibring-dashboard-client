@@ -9,10 +9,10 @@ import RoutePages from './components/Routing/route'
 
 import { w3cwebsocket } from 'websocket'
 import { getWebsocketSuccess, setWebsocketLoading } from "./redux/actions/websocket.action";
-import { getActivityLogAll } from "./redux/actions/activity.action";
+import { getActivityLogAll, getActivityLogSuccess } from "./redux/actions/activity.action";
 import { connect } from 'react-redux';
 import ActivityLog from './components/ActivityLog';
-const wsServer = w3cwebsocket('ws://46.101.5.146:12345')
+const wsServer = w3cwebsocket('ws://192.168.43.241:12345')
 
 
 
@@ -33,7 +33,10 @@ export class App extends Component {
         }
         wsServer.onmessage = (message) => {
             const data = JSON.parse(message.data)
+            console.log(' ');
+
             console.log(data);
+            console.log(' ');
 
             switch (data.action) {
                 case 'request':
@@ -50,14 +53,28 @@ export class App extends Component {
                 case 'connectAppEvent':
                     console.log('DashBoard Connected');
                     this.props.getWebsocketSuccess(data)
-                    // wsServer.send(
-                    //     JSON.stringify(
-                    //         {
-                    //             action: 'status',
-                    //             id: data.connectionID
-                    //         }
-                    //     )
-                    // )
+                    wsServer.send(
+                        JSON.stringify(
+                            {
+                                action: 'status',
+                                id: data.connectionID
+                            }
+                        )
+                    )
+                    break;
+
+                case 'dashboardConnected':
+                    console.log('DashBoard Connected', data);
+                    this.props.getWebsocketSuccess(data)
+                   this.props.getActivityLogAll()
+                    wsServer.send(
+                        JSON.stringify(
+                            {
+                                action: 'status',
+                                id: data.connectionID
+                            }
+                        )
+                    )
                     break;
                 default:
                     break;
@@ -69,11 +86,11 @@ export class App extends Component {
         const { activity } = this.props.activity
         return (
             <div className='flex'>
-                <div className='w-1/12'>
+                <div className='lg:w-2/12 hidden lg:block'>
                     <SideBar />
                 </div>
 
-                <div className='w-8/12'>
+                <div className='lg:w-8/12 md:w-full'>
 
                     {/* <MDBanner /> */}
                     <RoutePages />
@@ -85,7 +102,7 @@ export class App extends Component {
                             Middle</div>
                     </div> */}
                 </div>
-                <div className='w-3/12'>
+                <div className='lg:w-2/12 hidden lg:block'>
                     <ActivityLog activity={activity} />
                 </div>
             </div>
@@ -100,7 +117,7 @@ const mapStateToProps = (state) => ({
     activity: state.activity
 })
 
-export default connect(mapStateToProps, { getWebsocketSuccess, setWebsocketLoading, getActivityLogAll })(App)
+export default connect(mapStateToProps, { getWebsocketSuccess, setWebsocketLoading, getActivityLogAll, getActivityLogSuccess })(App)
 
 
 

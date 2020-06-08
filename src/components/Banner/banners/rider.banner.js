@@ -26,16 +26,16 @@ export class RiderBanner extends Component {
 
                 <div className='flex flex-col text-lg pt-1'>
                     <div className='flex justify-between pl-2 pr-2'>
-                        <h1 className='text-teal-900'>Riders :</h1>
-                        <h1 className='text-teal-900'>{number}</h1>
+                        <h1 className='text-gray-300'>Riders :</h1>
+                        <h1 className='text-gray-300'>{number}</h1>
                     </div>
                     <div className='flex justify-between pl-2 pr-2'>
-                        <h1 className='text-teal-900'>Online :</h1>
-                        <h1 className='text-teal-900'>{online}</h1>
+                        <h1 className='text-gray-300'>Online :</h1>
+                        <h1 className='text-gray-300'>{online}</h1>
                     </div>
                     <div className='flex justify-between pl-2 pr-2'>
-                        <h1 className='text-teal-900'>On Delivery :</h1>
-                        <h1 className='text-teal-900'>{onDelivery}</h1>
+                        <h1 className='text-gray-300'>On Delivery :</h1>
+                        <h1 className='text-gray-300'>{onDelivery}</h1>
                     </div>
                 </div>
             </div>
