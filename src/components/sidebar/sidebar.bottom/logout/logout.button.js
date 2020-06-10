@@ -2,12 +2,12 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 export class LogOutSideBarButton extends Component {
-    render() {
-        return (
-            <div>
-                <li className="flex-1 m-2">
-                  <a href="/"
-                    className="
+  render() {
+    return (
+      <div>
+        <li className="flex-1 m-2">
+          <a href="/logout"
+            className="
                 block 
                 py-1 px-2
                 align-middle 
@@ -18,35 +18,35 @@ export class LogOutSideBarButton extends Component {
                 hover:border-teal-300
                 rounded-lg 
                 border-l-0 border-r-0 border-gray-800">
-                    <div className='flex flex-row justify-between'>
-                      <div>
-                        <i className="fas fa-sign-out-alt md:pr-3"></i>
+            <div className='flex flex-row justify-between'>
+              <div>
+                <i className="fas fa-sign-out-alt md:pr-3"></i>
 
-                        <span className="
+                <span className="
                 block
                 text-xs
                 
                 md:inline-block">
-                          Log Out
+                  Log Out
                 </span>
-                      </div>
-                      <div>
+              </div>
+              {/* <div>
                         <i className="fas fa-chevron-down pr-2"></i>
-                      </div>
-                    </div>
-                  </a>
-                </li>
+                      </div> */}
             </div>
-        )
-    }
+          </a>
+        </li>
+      </div>
+    )
+  }
 }
 
 const mapStateToProps = (state) => ({
-    
+
 })
 
 const mapDispatchToProps = {
-    
+
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(LogOutSideBarButton)

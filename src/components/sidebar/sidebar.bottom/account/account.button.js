@@ -6,7 +6,7 @@ export class AccountSideBarButton extends Component {
         return (
             <div>
                 <li className="flex-1 m-2">
-                    <a href="/"
+                    <a href="/account"
                         className="
                 block 
                 py-1 px-2
@@ -30,9 +30,9 @@ export class AccountSideBarButton extends Component {
                                     Account
                 </span>
                             </div>
-                            <div>
+                            {/* <div>
                                 <i className="fas fa-chevron-down pr-2"></i>
-                            </div>
+                            </div> */}
                         </div>
                     </a>
                 </li>

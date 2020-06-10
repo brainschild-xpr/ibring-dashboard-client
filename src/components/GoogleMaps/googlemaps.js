@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
-import CarTop from './car_top.png'
+// import CarTop from './car_top.png'
 
 class MapContainer extends Component {
     render() {
@@ -18,8 +18,9 @@ class MapContainer extends Component {
                 <Marker
                     position={{ lat: -0.3779683, lng: 35.944295 }}
                     icon={{
-                        url: CarTop,
-                        scaledSize: new this.props.google.maps.Size(20, 40)
+                        url: 'https://firebasestorage.googleapis.com/v0/b/shopiwa-main.appspot.com/o/driverPhotos%2FLets%20Ibring?alt=media&token=2dc58a89-bf3e-4768-8e67-a77d5e06d610',
+                        // CarTop,
+                        scaledSize: new this.props.google.maps.Size(35, 35)
                     }}
                 />
             </Map>

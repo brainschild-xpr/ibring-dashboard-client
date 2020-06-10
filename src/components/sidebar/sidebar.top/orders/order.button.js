@@ -22,10 +22,9 @@ export class OrderSideBarButton extends Component {
         const OpenedDropDownState = () => {
             return (
                 <div className='rounded-lg py-1 ml-6 mb-1 mt-2'>
-                    <a className='block px-2 py-1 text-orange-300 rounded-lg hover:bg-orange-500 hover:text-orange-300' href="/order/manage">Manage</a>
-                    <a className='block px-2 py-1 text-orange-300 rounded-lg hover:bg-orange-500 hover:text-orange-300' href="/order/posted" >Posted</a>
-                    <a className='block px-2 py-1 text-orange-300 rounded-lg hover:bg-orange-500 hover:text-orange-300' href="/order/confirmed" >Confirmed</a>
-        
+                    <a className='block px-2 py-1 text-orange-300 rounded-lg hover:bg-orange-500 hover:text-orange-300' href="/orders/manage">Manage</a>
+                    <a className='block px-2 py-1 text-orange-300 rounded-lg hover:bg-orange-500 hover:text-orange-300' href="/orders/posted" >Posted</a>
+                    <a className='block px-2 py-1 text-orange-300 rounded-lg hover:bg-orange-500 hover:text-orange-300' href="/orders/confirmed" >Confirmed</a>
                 </div>
             );
         }

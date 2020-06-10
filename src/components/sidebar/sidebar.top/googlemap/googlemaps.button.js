@@ -23,7 +23,7 @@ export class GoogleMapsSidebarButton extends Component {
         const OpenedDropDownState = () => {
             return (
                 <div className='rounded-lg py-1 ml-6 mb-1 mt-2'>
-                    <a className='block px-2 py-1 text-yellow-300 rounded-lg hover:bg-yellow-500 hover:text-yellow-300' href="/googlemaps/manage">Manage</a>
+                    <a className='block px-2 py-1 text-yellow-300 rounded-lg hover:bg-yellow-500 hover:text-yellow-300' href="/googlemaps/manage">Tracking</a>
                     {/* <a className='block px-2 py-1 text-yellow-300 rounded-lg hover:bg-yellow-500 hover:text-yellow-300' href="/riders/online" >Posted</a>
                     <a className='block px-2 py-1 text-yellow-300 rounded-lg hover:bg-yellow-500 hover:text-yellow-300' href="/riders/offline" >Confirmed</a> */}
 
@@ -65,7 +65,7 @@ export class GoogleMapsSidebarButton extends Component {
                 text-xs
                 
                 md:inline-block">
-                                GoogleMaps
+                                RiderTracking
                 </span>
                         </div>
                         <div>
