@@ -2,12 +2,12 @@ import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import HomeDashBoard from '../Home/home.dash'
 // import Counter from '../Counter/counter'
-import { RidersManage } from '../Rider/riders.manage'
-import { RidersOnline } from '../Rider/riders.online'
+import { RidersManage } from '../DashPages/Rider/riders.manage'
+import { RidersOnline } from '../DashPages/Rider/riders.online'
 import { GoogleMapsManage } from '../GoogleMaps/googlemaps.manage'
-import { OrdersManage } from '../Order/orders.manage'
-import { OrdersPosted } from '../Order/orders.posted'
-import { OrdersConfirmed } from '../Order/orders.confirmed'
+import { OrdersManage } from '../DashPages/Order/orders.manage'
+import { OrdersPosted } from '../DashPages/Order/orders.posted'
+import { OrdersConfirmed } from '../DashPages/Order/orders.confirmed'
 import { DeliveryManage } from '../DashPages/Delivery/delivery.manage'
 import { DeliveryOnDelivery } from '../DashPages/Delivery/deliveryonDelivery'
 import { DeliveryCancelled } from '../DashPages/Delivery/delivery.cancelled'
@@ -25,7 +25,7 @@ export default function RoutePages() {
                 <Route path="/" exact >
                     <HomeDashBoard />
                     {/* <Counter /> */}
-                </Route>/>
+                </Route>
                 <Route path="/dashboard" exact >
                     <HomeDashBoard />
                 </Route>
@@ -38,13 +38,13 @@ export default function RoutePages() {
                 {/* Route to Riders Online Home from '/riders/online */}
                 <Route path="/riders/online" exact>
                     <RidersOnline />
-                </Route> />
+                </Route>
 
 
                 {/* Route to Riders Online Home from '/riders/online */}
                 <Route path="/orders/manage" exact>
                     <OrdersManage />
-                </Route> />
+                </Route>
                 {/* Route to Riders Manage Home from '/riders/manage' */}
                 <Route path="/orders/posted" exact >
                     <OrdersPosted />
@@ -58,7 +58,7 @@ export default function RoutePages() {
                 {/* Route to Riders Online Home from '/riders/online */}
                 <Route path="/delivery/manage" exact>
                     <DeliveryManage />
-                </Route> />
+                </Route>
                 {/* Route to Riders Manage Home from '/riders/manage' */}
                 <Route path="/delivery/onDelivery" exact >
                     <DeliveryOnDelivery />
@@ -76,31 +76,31 @@ export default function RoutePages() {
                 {/* Route to Riders Online Home from '/riders/online */}
                 <Route path="/earnings/manage" exact>
                     <EarningsManage />
-                </Route> />
+                </Route>
 
 
                 {/* Route to Riders Online Home from '/riders/online */}
                 <Route path="/googlemaps/manage" exact>
                     <GoogleMapsManage />
-                </Route> />
+                </Route>
 
 
                 {/* Route to Riders Online Home from '/riders/online */}
                 <Route path="/account" exact>
                     <Account />
-                </Route> />
+                </Route>
 
 
                 {/* Route to Riders Online Home from '/riders/online */}
                 <Route path="/settings" exact>
                     <Settings />
-                </Route> />
+                </Route>
 
 
                 {/* Route to Riders Online Home from '/riders/online */}
                 <Route path="/googlemaps/manage" exact>
                     <GoogleMapsManage />
-                </Route> />
+                </Route>
 
 
 

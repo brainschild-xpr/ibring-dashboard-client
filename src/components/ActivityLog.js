@@ -163,21 +163,22 @@ class ActivityLog extends Component {
                         return <div className='flex flex-row bg-gray-600 p-2 mx-2 mt-2 rounded justify-between' key={timestamp}>
                             <div className='w-3/12 p-1'>
                                 <div className='flex rounded-full self-center'>
-                                    <img src={riderObj.driverPhoto} alt={riderObj.driverSname} className='w-16 h-16 rounded-full border-solid border-white border-2 object-cover' />
+                                    <img src={riderObj.driverPhoto} alt={riderObj.driverSname} className='w-12 h-12 rounded-full border-solid border-white border-2 object-cover' />
                                 </div>
                             </div>
 
                             <div className='w-9/12 text-left text-gray-400 justify-between p-1'>
                                 <div className='flex flex-row justify-between'>
                                     <p className='text-l'>{riderObj.driverFname + " " + riderObj.driverSname}</p>
-                                    <p>{newBakHour + "" + newBakMins + " Hrs"} </p>
+                                    <p className='text-teal-300'>{
+                                        activitySyncStatusConnect
+                                    }</p>
+
 
                                 </div>
 
                                 <div className='flex flex-row justify-between'>
-                                    <p className='text-teal-300'>{
-                                        activitySyncStatusConnect
-                                    }</p>
+                                    <p>{newBakHour + "" + newBakMins + " Hrs"} </p>
                                     <p>{newBakDate + "/" + newBakMonths + "/" + newBakYear + ' '}</p>
                                 </div>
 

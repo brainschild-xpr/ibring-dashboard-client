@@ -27,13 +27,13 @@ class HomeDashBoard extends Component {
     componentDidMount() {
         // this.props.getActivityLogAll();
         this.props.getDrivers();
-        this.props.getPostedOrders();
-        this.props.getConfirmedOrders()
+        // this.props.getPostedOrders();
+        // this.props.getConfirmedOrders()
 
     }
 
     render() {
-        console.log('Props For Dashboard: \n', this.props);
+        // console.log('Props For Dashboard: \n', this.props);
         const { drivers, driverLoading, driverError } = this.props.driver;
         // const { activity } = this.props.activity
         // const loading = false

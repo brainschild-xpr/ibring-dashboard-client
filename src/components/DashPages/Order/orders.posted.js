@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { NavBar } from '../NavBar/navbar.react'
+import { NavBar } from '../../NavBar/navbar.react'
 
 export class OrdersPosted extends Component {
     render() {

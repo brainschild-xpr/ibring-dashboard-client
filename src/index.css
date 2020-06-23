@@ -41,8 +41,12 @@ height: 95vh;
   height: 63vh;
 }
 
-.w-10M{
+.w-15M{
   width: 15%;
+}
+
+.w-70M{
+  width: 70%;
 }
 
 .w-90M{
@@ -50,14 +54,14 @@ height: 95vh;
 }
 /* @media screen and (max-width:1024px)
 {
-  .w-10M{
+  .w-15M{
     width: 10%;
   }
 }
 
 @media screen and (max-width:768px)
 {
-  .w-10M{
+  .w-15M{
     width: 10%;
   }
 } */

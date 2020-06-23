@@ -1,12 +1,11 @@
 // import { GET_DRIVERS_LOADING, GET_DRIVERS_SUCCESS, GET_DRIVERS_ERROR } from './types'
 
 import actionType from '../actionTypes/types'
-
 import axios from 'axios'
 
 export const getDrivers = () => dispatch => {
     console.log('Get Drivers has been dispatched');
-    
+
     dispatch(getDriversLoading())
     axios
         .get('/API/getDrivers/').then(
@@ -17,12 +16,11 @@ export const getDrivers = () => dispatch => {
                     throw (res.error)
                 }
 
-                dispatch(
-                    getDriversSuccess(res.data)
-                )
+                dispatch(getDriversSuccess(res.data))
 
                 console.log(res.data);
-            })
+            }
+        )
         .catch(error => {
             dispatch(getDriversError(error))
         })
