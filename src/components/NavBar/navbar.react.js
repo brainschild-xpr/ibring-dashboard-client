@@ -10,8 +10,8 @@ export class NavBar extends Component {
             <div className='text-left bg-gray-400 sticky h-12'>
                 <header>
                     <div className='text-teal-700 p-3 '>
-                        <span>
-                           > {title}
+                        <span className='text-lg'>
+                        {title}
                         </span>
                     </div>
                     {/* <div className='hidden md:block text-gray-900'>API</div>
