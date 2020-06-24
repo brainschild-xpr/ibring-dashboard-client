@@ -15,19 +15,23 @@ export class MDBanner extends Component {
     return (
 
       <div className='flex lg:flex-row'>
-        <div className="lg:w-1/4 md:w-1/2 h-64 lg:mx-4 bg-teal-400 shadow-2xl rounded-lg border-2 border-teal-600">
+        <div className="lg:w-1/4 md:w-1/2 h-64 lg:mx-4 bg-teal-400 shadow-2xl rounded-lg m-1 ">
+          {/* border-2 border-teal-600 "> */}
           <RiderBanner number={driversLength} />
         </div>
 
-        <div className="lg:w-1/4 md:w-1/2 h-64 lg:mr-2 bg-orange-500 shadow-2xl rounded-lg border-2 border-orange-600">
+        <div className="lg:w-1/4 md:w-1/2 h-64 lg:mr-2 bg-orange-500 shadow-2xl rounded-lg m-1 ">
+          {/* border-2 border-orange-600 "> */}
           <OrderBanner postedOrders={postedOrdersLength} confirmedOrders={confirmedOrdersLength} />
         </div>
 
-        <div className="lg:w-1/4 md:w-1/2 h-64 lg:ml-2 bg-blue-500 shadow-2xl rounded-lg border-2 border-blue-600">
+        <div className="lg:w-1/4 md:w-1/2 h-64 lg:ml-2 bg-blue-500 shadow-2xl rounded-lg m-1 ">
+          {/* border-2 border-blue-600 "> */}
           <DeliveryBanner />
         </div>
 
-        <div className="lg:w-1/4 md:w-1/2 h-64 lg:mx-4 bg-red-500 shadow-2xl rounded-lg border-2 border-red-600">
+        <div className="lg:w-1/4 md:w-1/2 h-64 lg:mx-4 bg-red-500 shadow-2xl rounded-lg m-1  ">
+          {/* Sborder-2 border-red-600 "> */}
           <EarningBanner />
         </div>
       </div >

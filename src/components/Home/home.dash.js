@@ -85,7 +85,7 @@ class HomeDashBoard extends Component {
                 :
                 driverError === null
                     ?
-                    <div className='bg-gray-400 h-full'>
+                    <div className='bg-gray-400 h-full px-1'>
                         {DataAvailable}
 
                         <div className='flex flex-row'>
